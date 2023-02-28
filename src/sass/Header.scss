@@ -1,0 +1,178 @@
+$mobile-width: 480px; 
+$tablet-width: 768px; 
+$desktop-width: 1024px;  
+
+@mixin mobile { @media (max-width: #{$mobile-width - 1px}) {     
+  @content;   
+ } 
+}  
+
+@mixin tablet { @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {       
+   @content;   
+ } 
+}  
+
+@mixin desktop {   @media (min-width: #{$desktop-width}) {     
+  @content;  
+ } 
+}
+
+//style
+.header{
+    width: 100vw;
+    // max-width: 1440px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 10;
+    transition: 0.4s;
+    &--hided{
+        transform: translateY(-120px);
+    }
+    @include tablet {
+        width: 100vw;
+    }
+    &__container{
+        width: 1200px;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        @include tablet {
+            width: calc(100vw - 100px);
+        }
+        @include mobile() {
+            justify-content: space-between;
+            flex-direction: row-reverse;
+        }
+    }
+    &__toggle {
+        @include mobile{
+            position: absolute;
+            left: 20px;
+            width: 32px;
+            height: 32px;
+            // background-color: #fff;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 30px;
+                height: 3px;
+                background-color: black;
+                transform: translateY(-10px);
+                box-shadow: 0 10px black;
+                transition: 0.5s; 
+                border-radius: 5px;
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                width: 30px;
+                height: 3px;
+                background-color: black;
+                transform: translateY(10px);
+                transition: 0.5s;
+                border-radius: 5px;
+            }
+            &--active {
+                &::before {
+                    transform: translateY(0px) rotate(45deg);
+                    box-shadow: 0 0px rgb(0, 0, 0);
+                }
+                &::after {
+                    transform: translateY(0px) rotate(-45deg);
+                    box-shadow: 0 0px;
+                }
+            }
+        }
+    }
+    &__option{
+        @include mobile {
+            position: absolute;
+            width: 100vw;
+            padding-top: 15px;
+            background-color: #f84646c8;
+            border-radius: 10px;
+            transform: translateY(-150px);
+            transition: 0.3s;
+            opacity: 0;
+            &--activeMenu {
+                opacity: 1;
+                transform: translateY(140px);
+            }
+        }
+        &__list{
+            user-select: none;
+            display: flex;
+            @include mobile() {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-shadow: 4px 3px 0 #7A7A7A;
+            }
+            li{
+                margin-right: 40px;
+                list-style: none;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 20px;
+                cursor: pointer;
+                transition: 0.4s;
+                &:hover {
+                    transform: scale(1.2);
+                }
+                @include tablet {
+                    margin-right: 20px;
+                    font-size: 12px;
+                }
+                @include mobile() {
+                    margin: 0;
+                    margin-bottom: 15px;
+                    font-size: 18px;
+                    color: white;
+                    &:hover {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+    &__btn{
+        button{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            gap: 10px;
+            
+            width: 91px;
+            height: 40px;
+            left: 1229px;
+            top: 35px;
+    
+            background: #F84646;
+            border-radius: 5px;
+            color:white;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            transition: 0.4s;
+            &:hover {
+                box-shadow: rgba(238, 10, 10, 0.55) 0px 5px 15px;
+            }
+            @include tablet {
+                
+            }
+            @include mobile() {
+                margin-right: 20px;
+            }
+        }
+    }
+}

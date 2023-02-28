@@ -1,0 +1,113 @@
+$mobile-width: 480px; 
+$tablet-width: 768px; 
+$desktop-width: 1024px;  
+
+@mixin mobile { @media (max-width: #{$mobile-width - 1px}) {     
+  @content;   
+ } 
+}  
+
+@mixin tablet { @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {       
+   @content;   
+ } 
+}  
+
+@mixin desktop {   @media (min-width: #{$desktop-width}) {     
+  @content;  
+ } 
+}
+
+.manage {
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background: #ccc;
+    padding-top: 120px;
+    padding-bottom: 140px;
+    @include tablet() {
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+    @include mobile() {
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+    &__container {
+        width: 1200px;
+        height: 800px;
+        // background: #fff;
+        @include tablet() {
+            width: calc(100vw - 100px);
+            height: fit-content;
+        }
+        @include mobile() {
+            height: fit-content;
+        }
+    }
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h2{
+            width: 428px;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 36px;
+            line-height: 49px;
+            text-align: center;
+            @include tablet() {
+                font-size: 28px;
+            }
+            @include mobile() {
+                width: 100vw;
+                font-size: 24px;
+            }
+        }
+        p {
+            width: 994px;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 40px;
+            text-align: center;
+            letter-spacing: 0.2px;
+            color: #000000;     
+            margin-top: 30px;  
+            padding-bottom: 90px;
+            @include tablet() {
+                width: 648px;
+                font-size: 18px;
+                line-height: 32px;
+            }
+            @include mobile() {
+                width: 334px;
+                height: 109px;
+                font-size: 12px;
+                line-height: 22px;
+                margin-top: 15px;
+            }
+        }
+    }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 85px;
+        justify-content: space-evenly;
+        @include tablet() {
+            gap: 45px; 
+            // background: #ccc;
+            // padding: 0px 15px 0px 15px;
+        }
+        @include mobile() {
+            display: flex;
+            flex-wrap: none;
+            justify-content: center;
+            gap: 80px;
+        }
+    }
+}

@@ -1,0 +1,146 @@
+$mobile-width: 480px; 
+$tablet-width: 768px; 
+$desktop-width: 1024px;  
+$red-pick: #F84646;
+
+@mixin mobile { @media (max-width: #{$mobile-width - 1px}) {     
+  @content;   
+ } 
+}  
+
+@mixin tablet { @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {       
+   @content;   
+ } 
+}  
+
+@mixin desktop {   @media (min-width: #{$desktop-width}) {     
+  @content;  
+ } 
+}
+
+.provide {
+    width: 100vw;
+    background: $red-pick;
+    display: flex;
+    justify-content: center;
+    @include tablet() {
+
+    }
+    &__container {
+        width: 1200px;
+        height: inherit;
+        // background: #ccc;
+        padding-top: 75px;
+        padding-bottom: 75px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include tablet() {
+            width: calc(100vw - 100px);
+            height: fit-content;
+        }
+        @include mobile() {
+            width: 100vw;
+            padding-top: 50px;
+        }
+    }
+    &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        @include tablet() {
+            display: flex;
+            justify-content: baseline;
+        }
+        h1 {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 64px;
+            text-align: center;
+            font-feature-settings: 'liga' off;
+            color: #FFFFFF;
+            @include tablet() {
+                font-size: 38px;
+            }
+            @include mobile() {
+                font-size: 40px;
+            }
+        }
+        p {
+
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 32px;
+            text-align: center;
+            font-feature-settings: 'liga' off;
+            color: #FFFFFF;
+            margin-top: 8px;
+            @include tablet() {
+                font-size: 14px;
+                margin-top: 4px;
+            }
+            @include mobile() {
+                font-size: 16px;
+            }
+        }
+    }
+    &__items{
+        display: flex;
+        flex-direction: row;
+        padding-left: 60px;
+        padding-right: 60px;
+        margin-top: 60px;
+        // background: #000;
+        align-items: center;
+        @include tablet() {
+            margin-top: 50px;
+            padding: 0;
+        }
+        @include mobile() {
+            padding: 0;
+            flex-direction: column;
+            margin-top: 60px;
+            width: 184px;
+        }
+        p {
+            // width: 250px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 31px;
+            /* or 172% */
+            font-feature-settings: 'liga' off;
+            
+            color: #FFFFFF;
+            @include tablet() {
+                font-size: 12px;
+                line-height: 22px;
+            }
+            @include mobile() {
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+        img {
+            width: 25px;
+            height: 25px;
+            margin-right: 45px;
+            margin-left: 45px;
+            @include tablet() {
+                margin-right: 15px;
+                margin-left: 15px;
+            }
+            @include mobile() {
+                width: 36px;
+                height: 36px;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                transform: rotateZ(90deg);
+            }
+        }
+    }
+}
