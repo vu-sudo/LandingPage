@@ -168,6 +168,9 @@ $desktop-width: 1024px;
             font-weight: 400;
             font-size: 16px;
             line-height: 36px;
+            @include mobile() {
+                margin-left: 20px;
+            }
         }
         button{
             width: 136px;

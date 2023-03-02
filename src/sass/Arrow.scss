@@ -57,7 +57,7 @@ $desktop-width: 1024px;
             right: calc(100vw - 55%);
         }
         @include mobile() {
-            bottom: 80px;
+            bottom: 15px;
             right: calc(100vw - 58%);
         }
     }
