@@ -1,0 +1,81 @@
+$mobile-width: 480px; 
+$tablet-width: 768px; 
+$desktop-width: 1024px;  
+
+@mixin mobile { @media (max-width: #{$mobile-width - 1px}) {     
+  @content;   
+ } 
+}  
+
+@mixin tablet { @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {       
+   @content;   
+ } 
+}  
+
+@mixin desktop {   @media (min-width: #{$desktop-width}) {     
+  @content;  
+ } 
+}
+
+.arrow {
+    position: fixed;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    // border: 2px solid black;
+    border-radius: 50%;
+    bottom: 40px;
+    right: -100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: rgba(255, 255, 255, 0.664) 0px 2px 25px;
+    @include tablet() {
+        bottom: -100px;
+        right: calc(100vw - 55%);
+    }
+    @include mobile() {
+        bottom: -100px;
+        right: calc(100vw - 55%);
+    }
+    &:hover {
+        background-color: rgba(239, 56, 56, 0.791);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+
+    }
+    &--active {
+        bottom: 40px;
+        right:  40px;
+        @include tablet() {
+            bottom: 100px;
+            right: calc(100vw - 55%);
+        }
+        @include mobile() {
+            bottom: 80px;
+            right: calc(100vw - 58%);
+        }
+    }
+}
+
+.animate {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover .icon {
+        color: white;
+    }
+    color: white;
+}
+
+.icon {
+    font-size: 30px;
+    color: red;
+}

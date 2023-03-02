@@ -4,7 +4,7 @@ import "../sass/Banner.scss"
 import BanerImage from "../asset/image/Rectangle_1.png"
 function Banner() {
   return (
-    <div className='banner'>
+    <div className='banner' id='banner'>
       <div className='banner__image'>
         <img src={BanerImage} alt="banner_image" />
       </div>

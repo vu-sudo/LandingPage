@@ -1,7 +1,9 @@
+import Aos from 'aos';
 import React, { useState, useEffect } from 'react'
 
 import "../sass/Header.scss"
 function Header() {
+    Aos.init();
     const [activeNav, setActiveNav] = useState(false);
     const handleClick = () => {
         setActiveNav(activeNav => !activeNav);
@@ -16,7 +18,7 @@ function Header() {
         setScrollPosition(pos);
         setActiveNav(false);
       }
-    console.log(scrollPosition);
+    // console.log(scrollPosition);
     
     
     useEffect(() => {
@@ -35,11 +37,11 @@ function Header() {
     useEffect(() => {
         scollOffHeader();
      })
-    console.log(activeHeader);
+    // console.log(activeHeader);
 
     let headerActive = activeHeader ? "" : "hided"
     return (
-        <div className={`header ${"header--" + headerActive}`}>
+        <div className={`header ${"header--" + headerActive}`} id = "header">
             <div className='header__container'>
             <div className={`header__toggle ${"header__toggle--" + active}`}
             onClick = {() => handleClick()}

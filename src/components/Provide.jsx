@@ -2,10 +2,12 @@ import React from 'react'
 
 import "../sass/Provide.scss"
 import arrowLogo from "../asset/icon/CaretCircleDoubleRight.svg"
+import Aos from 'aos'
 
 function Provide() {
+  Aos.init()
   return (
-    <div className='provide'>
+    <div className='provide'  data-aos="fade-up" >
         <div className='provide__container'>
             <div className='provide__header'>
                 <h1>Test Yönetimiyle Neler Sağlıyoruz?</h1>

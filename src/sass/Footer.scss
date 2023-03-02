@@ -1,0 +1,139 @@
+$mobile-width: 480px; 
+$tablet-width: 768px; 
+$desktop-width: 1024px;  
+
+@mixin mobile { @media (max-width: #{$mobile-width - 1px}) {     
+  @content;   
+ } 
+}  
+
+@mixin tablet { @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {       
+   @content;   
+ } 
+}  
+
+@mixin desktop {   @media (min-width: #{$desktop-width}) {     
+  @content;  
+ } 
+}
+
+.footer {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F8464A;
+    &__container {
+        width: 1200px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        @include tablet() {
+          width: calc(100vw - 100px);
+          padding-top: 60px;
+          padding-bottom: 60px;
+        }
+        @include mobile() {
+          width: 100vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding-top: 20px;
+        }
+  
+    }
+    &__contents {
+      display: flex;
+      @include mobile() {
+        width: 94vw;
+        flex-direction: column;
+      }
+      &__text {
+        margin-right: 100px;
+        @include tablet() {
+          margin-right: 20px;
+        }
+        @include mobile() {
+          margin-right: 0px;
+          margin-top: 50px;
+        }
+        h3 {
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+
+          font-feature-settings: 'pnum' on, 'lnum' on;
+
+          color: #FFFFFF;
+          @include tablet() {
+            font-size: 12px;
+          }
+          @include mobile() {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    &__bottom{
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      @include mobile() {
+        width: 94vw;
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+    &__refer {
+    
+      p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        color: white;
+        @include tablet() {
+          font-size: 12px;
+        }
+        @include mobile() {
+          margin-top: 65px;
+          font-size: 16px;
+        }
+      }
+      img {
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+        margin-left: 18px;
+        @include tablet() {
+          transform: scale(0.8);
+        }
+        @include mobile() {
+          margin-left: 0px;
+          margin-right: 16px;
+        }
+      }
+    }
+}
+.ul {
+
+}
+.li {
+  list-style: none;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #E6E6E6;
+  margin-top: 24px;
+  @include tablet() {
+    font-size: 12px;
+    margin-top: 12px;
+  }
+  @include mobile() {
+    font-size: 16px;
+  }
+}
