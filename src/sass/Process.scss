@@ -23,13 +23,15 @@ $red-pick: #F84646;
     // background: #ccc;
     display: flex;
     justify-content: center;
+    padding-left: 120px;
+    padding-right: 120px;
     @include tablet() {
         width: 100vw;
     }
     &__container {
         width: 1200px;
-        padding-top: 180px;
-        padding-bottom: 180px;
+        padding-top: 160px;
+        padding-bottom: 160px;
         @include tablet() {
             width: calc(100vw - 100px);
             height: fit-content;

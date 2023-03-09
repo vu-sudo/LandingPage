@@ -53,7 +53,7 @@ $desktop-width: 1024px;
         bottom: 40px;
         right:  40px;
         @include tablet() {
-            bottom: 100px;
+            bottom: 15px;
             right: calc(100vw - 55%);
         }
         @include mobile() {

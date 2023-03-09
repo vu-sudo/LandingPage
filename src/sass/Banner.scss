@@ -72,14 +72,22 @@ $desktop-width: 1024px;
         position: absolute;
         width: 1200px;
         height: 404px;
-        top: 200px;
+        top: 190px;
+        padding-left: 140px;
+        padding-right: 140px;
+        transform: translateX(-120px);
         @include tablet{
             width: calc(100vw - 100px);
             top: 100px;
+            padding: 0;
+            transform: translateX(0px);
         }
         @include mobile {
             width: 100vw;
             top: 130px;
+            padding: 0;
+            transform: translateX(0px);
+            padding: 0;
         }
     }
     &__content{

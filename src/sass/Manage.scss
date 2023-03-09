@@ -25,10 +25,15 @@ $desktop-width: 1024px;
     justify-content: center;
     // background: #ccc;
     padding-top: 120px;
-    padding-bottom: 140px;
+    padding-bottom: 120px;
+    // margin-bottom: 120px;
+    padding-left: 120px;
+    padding-right: 120px;
     @include tablet() {
         padding-top: 60px;
         padding-bottom: 80px;
+        padding-left: 0;
+        padding-right: 0;
     }
     @include mobile() {
         padding-top: 60px;
@@ -78,7 +83,7 @@ $desktop-width: 1024px;
             letter-spacing: 0.2px;
             color: #000000;     
             margin-top: 30px;  
-            padding-bottom: 90px;
+            // padding-bottom: 90px;
             @include tablet() {
                 width: 648px;
                 font-size: 18px;
@@ -94,9 +99,10 @@ $desktop-width: 1024px;
         }
     }
     &__items {
+        margin-top: 90px;
         display: flex;
         flex-wrap: wrap;
-        gap: 85px;
+        gap: 65px;
         justify-content: space-evenly;
         @include tablet() {
             gap: 45px; 

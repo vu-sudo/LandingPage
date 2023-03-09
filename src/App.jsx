@@ -12,7 +12,7 @@ import Arrow from './components/Arrow';
 
 function App() {
   return (
-   <>
+   <div className='app'>
     <Header></Header>
     <Banner></Banner>
     <Manage></Manage>
@@ -22,7 +22,7 @@ function App() {
     <Contact></Contact>
     <Footer></Footer>
     <Arrow></Arrow>
-   </>
+   </div>
   );
 }
 

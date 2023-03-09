@@ -17,7 +17,7 @@ function Arrow() {
           window.removeEventListener("scroll", handleScroll);
         };
       }, []);
-      console.log(scrollPosition);
+    //   console.log(scrollPosition);
     const scollOnScroll = () => {
         if(scrollPosition >= 200) {
             setActiveScroll(activeScroll => true);
@@ -31,8 +31,8 @@ function Arrow() {
      let active = activeScroll ? "active" : "";
   return (
     <div>
-        <p class={`arrow ${"arrow--" + active}`} href = "#banner">
-            <a href="#banner" class="animate">
+        <p className={`arrow ${"arrow--" + active}`} href = "#banner">
+            <a href="#banner" className="animate">
                 <RxDoubleArrowUp className='icon'/>
             </a></p>
     </div>

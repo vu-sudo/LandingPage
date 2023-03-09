@@ -23,10 +23,18 @@ $desktop-width: 1024px;
     justify-content: center;
     align-items: center;
     background: #F8464A;
+    padding-right: 120px;
+    padding-left: 120px;
+    @include tablet() {
+      padding: 0;
+    }
+    @include mobile() {
+      padding: 0;
+    }
     &__container {
         width: 1200px;
         padding-top: 80px;
-        padding-bottom: 80px;
+        padding-bottom: 65px;
         @include tablet() {
           width: calc(100vw - 100px);
           padding-top: 60px;

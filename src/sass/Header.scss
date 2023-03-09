@@ -27,11 +27,18 @@ $desktop-width: 1024px;
     position: fixed;
     z-index: 10;
     transition: 0.4s;
+    padding-right: 120px;
+    padding-left: 120px;
     &--hided{
         transform: translateY(-120px);
     }
     @include tablet {
         width: 100vw;
+        padding: 0;
+        
+    }
+    @include mobile() {
+        padding: 0;
     }
     &__container{
         width: 1200px;
