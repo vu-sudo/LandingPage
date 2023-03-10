@@ -432,7 +432,6 @@ $red-pick: #F84646;
                     border: none;
                     color: white;
                     bottom: 0;
-                    right: 0;
                     @include tablet() {
                         width: 160px;
                         height: 48px;
@@ -443,6 +442,7 @@ $red-pick: #F84646;
                         width: 94vw;
                         margin-top: 40px;
                         font-size: 14px;
+                        right: 0;
                     }
                     @include smallTablet() {
                         width: 136px;
