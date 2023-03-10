@@ -1,14 +1,19 @@
-$mobile-width: 480px; 
-$tablet-width: 768px; 
-$desktop-width: 1024px;  
-$red-pick: #F84646;
+$mobile-width: 760px; 
+$tablet-width: 761px; 
+$smallTablet-width:1020px;
+$desktop-width: 1440px; 
 
 @mixin mobile { @media (max-width: #{$mobile-width - 1px}) {     
   @content;   
  } 
 }  
 
-@mixin tablet { @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {       
+@mixin smallTablet { @media (min-width: #{$mobile-width}) and (max-width: #{$smallTablet-width - 1px}) {       
+    @content;   
+  } 
+ }  
+
+@mixin tablet { @media (min-width: #{$smallTablet-width}) and (max-width: #{$desktop-width - 1px}) {       
    @content;   
  } 
 }  
@@ -17,7 +22,7 @@ $red-pick: #F84646;
   @content;  
  } 
 }
-
+$red-pick: #F84646;
 .process {
     width: 100vw;
     // background: #ccc;
@@ -27,12 +32,24 @@ $red-pick: #F84646;
     padding-right: 120px;
     @include tablet() {
         width: 100vw;
+        padding: 0;
+    }
+    @include smallTablet() {
+        width: 100vw;
+        padding: 0;
+        // display: none;
     }
     &__container {
         width: 1200px;
         padding-top: 160px;
         padding-bottom: 160px;
         @include tablet() {
+            width: calc(100vw - 100px);
+            height: fit-content;
+            padding-top: 80px;
+            padding-bottom: 100px;
+        }
+        @include smallTablet() {
             width: calc(100vw - 100px);
             height: fit-content;
             padding-top: 80px;
@@ -56,7 +73,10 @@ $red-pick: #F84646;
         position: relative;
         // background-color: #2E2E2E;
         @include tablet() {
-            height: 310px;
+            height: 404px;
+        }
+        @include smallTablet() {
+            height: 316px;
         }
         @include mobile() {
             width: 94vw;
@@ -69,7 +89,7 @@ $red-pick: #F84646;
             display: flex;
             justify-content: flex-end;
             @include tablet() {
-                height: 310px;
+                height: 404px;
             }
             @include mobile() {
                 width: 100%;
@@ -81,11 +101,15 @@ $red-pick: #F84646;
                 width: 505px;
                 height: 480px;
                 @include tablet() {
-                    height: 310px;
-                    width: 342px;
+                    width: 424px;
+                    height: 404px;
+                }
+                @include smallTablet() {
+                    width: 326px;
+                    height: 316px;
                 }
                 @include mobile() {
-                    // width: 343px;
+                    width: 100%;
                     height: 320px;
                 }
             }
@@ -95,7 +119,10 @@ $red-pick: #F84646;
             height: 480px;
             position: relative;
             @include tablet() {
-                height: 310px;
+                height: 404px;
+            }
+            @include smallTablet() {
+                height: 316px;
             }
             @include mobile() {
                 width: 94vw;
@@ -119,9 +146,18 @@ $red-pick: #F84646;
                     line-height: 76px;
                     @include tablet() {
                         width: 440px;
-                        font-size: 43px;
+                        font-size: 58px;
                         line-height: 50px;
                         height: 120px;
+                    }
+                    @include smallTablet() {
+                        width: 360.52px;
+                        height: 100px;
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 43px;
+                        line-height: 50px;
+                        // background: beige;
                     }
                     @include mobile() {
                         width: 339.96px;
@@ -145,10 +181,22 @@ $red-pick: #F84646;
                     line-height: 32px;
                     color: #808080;
                     @include tablet() {
-                        margin-top: 10px;
-                        width: 324.3px;
+                        margin-top: 19px;
+                        width: 428px;
+                        height: 171px;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 28px;
+                        color: #808080;
+                    }
+                    @include smallTablet() {
+                        margin-top: 13px;
+                        width: 340.31px;
+                        height: 127px;
+                        font-style: normal;
+                        font-weight: 400;
                         font-size: 11px;
-                        line-height: 18px;
+                        line-height: 20px;
                         color: #808080;
                     }
                     @include mobile() {
@@ -181,14 +229,20 @@ $red-pick: #F84646;
                     bottom: 0;
                     left: 0;
                     @include tablet() {
-                        width: 124px;
-                        height: 40px;
+                        width: 160px;
+                        height: 48px;
+                        margin-top: 46px;
+                        font-size: 14px;
                     }
                     @include mobile() {
                 
                         width: 94vw;
                         // margin-top: 40px;
                         font-size: 14px;
+                    }
+                    @include smallTablet() {
+                        width: 136px;
+                        font-size: 12px;
                     }
                 }
             }
@@ -204,7 +258,11 @@ $red-pick: #F84646;
         @include tablet() {
             // width: 310px;
             // display: none;
-            height: 310px;
+            height: 404px;
+            margin-top: 100px;
+        }
+        @include smallTablet() {
+            height: 316px;
             margin-top: 100px;
         }
         @include mobile() {
@@ -230,11 +288,15 @@ $red-pick: #F84646;
                 width: 505px;
                 height: 480px;
                 @include tablet() {
-                    height: 310px;
-                    width: 342px;
+                    width: 424px;
+                    height: 404px;
+                }
+                @include smallTablet() {
+                    width: 326px;
+                    height: 316px;
                 }
                 @include mobile() {
-                    // width: 343px;
+                    width: 100%;
                     height: 320px;
                 }
             }
@@ -244,8 +306,18 @@ $red-pick: #F84646;
             height: 480px;
             display: flex;
             @include tablet() {
-                height: 310px;
-                margin-left: 26px;
+                flex-direction: column;
+                align-items: flex-end;
+                position: relative; 
+                height: 404px;
+                // margin-left: 26px;
+            }
+            @include smallTablet() {
+                flex-direction: column;
+                // align-items: flex-end;
+                position: relative; 
+                height: 316px;
+                // margin-left: 26px;
             }
             @include mobile() {
                 width: 94vw;
@@ -256,6 +328,9 @@ $red-pick: #F84646;
             div {
                 margin-left: 50px;
                 @include tablet() {
+                    margin-left: 0px;
+                }
+                @include smallTablet() {
                     margin-left: 0px;
                 }
                 @include mobile() {
@@ -275,11 +350,19 @@ $red-pick: #F84646;
                     font-size: 64px;
                     line-height: 76px;
                     @include tablet() {
-                        width: 312px;
-                        height: 160px;
-                        font-size: 46px;
+                        width: 440px;
+                        font-size: 58px;
                         line-height: 50px;
                         height: 120px;
+                    }
+                    @include smallTablet() {
+                        width: 360.52px;
+                        height: 100px;
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 43px;
+                        line-height: 50px;
+                        // background: beige;
                     }
                     @include mobile() {
                         width: 339.96px;
@@ -303,11 +386,23 @@ $red-pick: #F84646;
                     line-height: 32px;
                     color: #808080;
                     @include tablet() {
-                        margin-top: 10px;
-                        width: 324.3px;
+                        margin-top: 19px;
+                        width: 428px;
+                        height: 171px;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 28px;
+                        color: #808080;             
+                    }
+                    @include smallTablet() {
+                        margin-top: 13px;
+                        width: 340.31px;
+                        height: 127px;
+                        font-style: normal;
+                        font-weight: 400;
                         font-size: 11px;
-                        line-height: 18px;
-                        color: #808080;                     
+                        line-height: 20px;
+                        color: #808080;
                     }
                     @include mobile() {
                         width: 340.97px;
@@ -339,13 +434,19 @@ $red-pick: #F84646;
                     bottom: 0;
                     right: 0;
                     @include tablet() {
-                        width: 124px;
-                        height: 40px;
+                        width: 160px;
+                        height: 48px;
+                        margin-top: 46px;
+                        font-size: 14px;
                     }
                     @include mobile() {
                         width: 94vw;
                         margin-top: 40px;
                         font-size: 14px;
+                    }
+                    @include smallTablet() {
+                        width: 136px;
+                        font-size: 12px;
                     }
                 }
             }

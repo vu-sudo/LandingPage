@@ -1,13 +1,19 @@
-$mobile-width: 480px; 
-$tablet-width: 768px; 
-$desktop-width: 1024px;  
+$mobile-width: 760px; 
+$tablet-width: 761px; 
+$smallTablet-width:1020px;
+$desktop-width: 1440px;   
 
 @mixin mobile { @media (max-width: #{$mobile-width - 1px}) {     
   @content;   
  } 
 }  
 
-@mixin tablet { @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {       
+@mixin smallTablet { @media (min-width: #{$mobile-width}) and (max-width: #{$smallTablet-width - 1px}) {       
+    @content;   
+  } 
+ }  
+
+@mixin tablet { @media (min-width: #{$smallTablet-width}) and (max-width: #{$desktop-width - 1px}) {       
    @content;   
  } 
 }  
@@ -30,8 +36,14 @@ $desktop-width: 1024px;
     padding-left: 120px;
     padding-right: 120px;
     @include tablet() {
-        padding-top: 60px;
-        padding-bottom: 80px;
+        padding-top: 120px;
+        padding-bottom: 115px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    @include smallTablet() {
+        padding-top: 120px;
+        padding-bottom: 115px;
         padding-left: 0;
         padding-right: 0;
     }
@@ -46,6 +58,16 @@ $desktop-width: 1024px;
         @include tablet() {
             width: calc(100vw - 100px);
             height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @include smallTablet() {
+            width: calc(100vw - 100px);
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         @include mobile() {
             height: fit-content;
@@ -65,11 +87,14 @@ $desktop-width: 1024px;
             line-height: 49px;
             text-align: center;
             @include tablet() {
-                font-size: 28px;
+                font-size: 36px;
             }
             @include mobile() {
                 width: 100vw;
                 font-size: 24px;
+            }
+            @include smallTablet() {
+                font-size: 28px;
             }
         }
         p {
@@ -85,7 +110,14 @@ $desktop-width: 1024px;
             margin-top: 30px;  
             // padding-bottom: 90px;
             @include tablet() {
-                width: 648px;
+                width: 852px;
+                height: 109px;
+                font-size: 24px;
+                line-height: 32px;
+            }
+            @include smallTablet() {
+                width: 647px;
+                height: 109px;
                 font-size: 18px;
                 line-height: 32px;
             }
@@ -105,15 +137,23 @@ $desktop-width: 1024px;
         gap: 65px;
         justify-content: space-evenly;
         @include tablet() {
-            gap: 45px; 
+            width: 734px;
+            height: 793px;
+            gap: 60px; 
             // background: #ccc;
             // padding: 0px 15px 0px 15px;
         }
+        @include smallTablet() {
+            width: 700px;
+            height: 793px;
+            gap: 0px; 
+        }
         @include mobile() {
+            margin-top: 40px;
             display: flex;
             flex-wrap: none;
             justify-content: center;
-            gap: 80px;
+            gap: 60px;
         }
     }
 }

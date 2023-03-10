@@ -1,13 +1,19 @@
-$mobile-width: 480px; 
-$tablet-width: 768px; 
-$desktop-width: 1024px;  
+$mobile-width: 760px; 
+$tablet-width: 761px; 
+$smallTablet-width:1020px;
+$desktop-width: 1440px; 
 
 @mixin mobile { @media (max-width: #{$mobile-width - 1px}) {     
   @content;   
  } 
 }  
 
-@mixin tablet { @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {       
+@mixin smallTablet { @media (min-width: #{$mobile-width}) and (max-width: #{$smallTablet-width - 1px}) {       
+    @content;   
+  } 
+ }  
+
+@mixin tablet { @media (min-width: #{$smallTablet-width}) and (max-width: #{$desktop-width - 1px}) {       
    @content;   
  } 
 }  
@@ -16,7 +22,7 @@ $desktop-width: 1024px;
   @content;  
  } 
 }
-
+$red-pick: #F84646;
 .reference {
     width: 100vw;
     background: #F4F5F7;
@@ -25,6 +31,10 @@ $desktop-width: 1024px;
     justify-content: center;
     padding-right: 120px;
     padding-left: 120px;
+    @include smallTablet() {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
     &__container {
         width: 1200px;
         padding-top: 60px;
@@ -32,9 +42,18 @@ $desktop-width: 1024px;
         // background: #ccc;
         @include tablet() {
             width: calc(100vw - 100px);
+            padding-top: 45px;
+            padding-bottom: 85px;
         }
         @include mobile() {
+            padding-top: 40px;
             width: 100vw;
+            padding-bottom: 40px;
+        }
+        @include smallTablet() {
+            width: calc(100vw - 100px);
+            padding-top: 45px;
+            padding-bottom: 85px;
         }
     }
     &__header {
@@ -49,8 +68,12 @@ $desktop-width: 1024px;
             font-feature-settings: 'salt' on, 'liga' off;
             color: #18191F;
             @include tablet() {
-                font-size: 38px;
-                line-height: 48px;
+                font-size: 48px;
+                line-height: 64px;
+            }
+            @include smallTablet() {
+                font-size: 32px;
+                line-height: 42px;
             }
             @include mobile() {
                 font-weight: 700;
@@ -69,12 +92,16 @@ $desktop-width: 1024px;
             font-feature-settings: 'salt' on, 'liga' off;
             color: #18191F;
             @include tablet() {
-                font-size: 15px;
+                font-size: 18px;
+            }
+            @include smallTablet() {
+                font-size: 14px;
             }
             @include mobile() {
+                margin-top: 14px;
                 font-weight: 500;
                 font-size: 14px;
-                line-height: 32px;
+                line-height: 24px;
             }
             
         }
@@ -93,19 +120,27 @@ $desktop-width: 1024px;
         @include mobile() {
             width: 100vw;
         }
+        @include smallTablet() {
+            width: calc(100vw - 100px);
+            margin-top: 36px;
+        }
     }
     &__items {
         display:  flex;
         flex-direction: row;
         align-items: center;
         justify-self: center;
-        gap: 20px;
+        gap: 24px;
         @include tablet() {
             // transform: scale(0.8);
-            gap: 18px;
+            gap: 12px;
         }
         @include mobile() {
             flex-direction: column;
+            gap: 24;
+        }
+        @include smallTablet() {
+            gap: 12px;
         }
         &__box {
             width: fit-content;
@@ -113,9 +148,12 @@ $desktop-width: 1024px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
+            gap: 24px;
             @include tablet() {
-                gap: 18px;
+                gap: 12px;
+            }
+            @include smallTablet() {
+                gap: 12px;
             }
         }
     }
@@ -137,11 +175,19 @@ $desktop-width: 1024px;
     justify-content: center;
     align-items: center;
     @include tablet() {
-        width: 134px;
-        height: 78px;
+        width: 170px;
+        height: 96px;
+        // img {
+        //     transform: scale(0.8);
+        // }
+        border-radius: 16px;
+    }
+    @include smallTablet() {
+        width: 130px;
+        height: 72px;
+        border-radius: 12px;
         img {
             transform: scale(0.8);
         }
-        border-radius: 12px;
     }
 }

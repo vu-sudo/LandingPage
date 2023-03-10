@@ -1,14 +1,19 @@
-$mobile-width: 480px; 
-$tablet-width: 768px; 
-$desktop-width: 1024px;  
-$red-pick: #F84646;
+$mobile-width: 760px; 
+$tablet-width: 761px; 
+$smallTablet-width:1020px;
+$desktop-width: 1440px; 
 
 @mixin mobile { @media (max-width: #{$mobile-width - 1px}) {     
   @content;   
  } 
 }  
 
-@mixin tablet { @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {       
+@mixin smallTablet { @media (min-width: #{$mobile-width}) and (max-width: #{$smallTablet-width - 1px}) {       
+    @content;   
+  } 
+ }  
+
+@mixin tablet { @media (min-width: #{$smallTablet-width}) and (max-width: #{$desktop-width - 1px}) {       
    @content;   
  } 
 }  
@@ -17,6 +22,7 @@ $red-pick: #F84646;
   @content;  
  } 
 }
+$red-pick: #F84646;
 
 .provide {
     width: 100vw;
@@ -26,6 +32,9 @@ $red-pick: #F84646;
     padding-left: 120px;
     padding-right: 120px;
     @include tablet() {
+        padding: 0;
+    }
+    @include smallTablet() {
         padding: 0;
     }
     @include mobile() {
@@ -44,8 +53,14 @@ $red-pick: #F84646;
         @include tablet() {
             width: calc(100vw - 100px);
             height: fit-content;
-            padding-top: 50px;
-            padding-bottom: 50px;
+            padding-top: 82px;
+            padding-bottom: 82px;
+        }
+        @include smallTablet() {
+            width: calc(100vw - 100px);
+            height: fit-content;
+            padding-top: 82px;
+            padding-bottom: 82px;
         }
         @include mobile() {
             width: 100vw;
@@ -61,6 +76,10 @@ $red-pick: #F84646;
             display: flex;
             justify-content: baseline;
         }
+        @include smallTablet() {
+            display: flex;
+            justify-content: baseline;
+        }
         h1 {
             font-style: normal;
             font-weight: 800;
@@ -70,7 +89,10 @@ $red-pick: #F84646;
             font-feature-settings: 'liga' off;
             color: #FFFFFF;
             @include tablet() {
-                font-size: 38px;
+                font-size: 48px;
+            }
+            @include smallTablet() {
+                font-size: 32px;
             }
             @include mobile() {
                 font-size: 40px;
@@ -87,8 +109,12 @@ $red-pick: #F84646;
             color: #FFFFFF;
             margin-top: 8px;
             @include tablet() {
-                font-size: 14px;
-                margin-top: 4px;
+                font-size: 18px;
+                margin-top: 8px;
+            }
+            @include smallTablet() {
+                font-size: 16px;
+                margin-top: 8px;
             }
             @include mobile() {
                 font-size: 16px;
@@ -104,7 +130,11 @@ $red-pick: #F84646;
         // background: #000;
         align-items: center;
         @include tablet() {
-            margin-top: 50px;
+            margin-top: 55px;
+            padding: 0;
+        }
+        @include smallTablet() {
+            margin-top: 55px;
             padding: 0;
         }
         @include mobile() {
@@ -124,7 +154,11 @@ $red-pick: #F84646;
             
             color: #FFFFFF;
             @include tablet() {
-                font-size: 12px;
+                font-size: 14px;
+                line-height: 22px;
+            }
+            @include smallTablet() {
+                font-size:  12px;
                 line-height: 22px;
             }
             @include mobile() {
@@ -138,8 +172,14 @@ $red-pick: #F84646;
             margin-right: 45px;
             margin-left: 45px;
             @include tablet() {
-                margin-right: 24px;
-                margin-left: 24px;
+                margin-right: 28px;
+                margin-left: 28px;
+                width: 32px;
+                height: 32px;
+            }
+            @include smallTablet() {
+                margin-right: 12px;
+                margin-left: 12px;
                 width: 32px;
                 height: 32px;
             }

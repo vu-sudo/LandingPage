@@ -1,13 +1,19 @@
-$mobile-width: 480px; 
-$tablet-width: 768px; 
-$desktop-width: 1024px;  
+$mobile-width: 760px; 
+$tablet-width: 761px; 
+$smallTablet-width:1020px;
+$desktop-width: 1440px;  
 
 @mixin mobile { @media (max-width: #{$mobile-width - 1px}) {     
   @content;   
  } 
 }  
 
-@mixin tablet { @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {       
+@mixin smallTablet { @media (min-width: #{$mobile-width}) and (max-width: #{$smallTablet-width - 1px}) {       
+    @content;   
+  } 
+ }  
+
+@mixin tablet { @media (min-width: #{$smallTablet-width}) and (max-width: #{$desktop-width - 1px}) {       
    @content;   
  } 
 }  
@@ -16,7 +22,6 @@ $desktop-width: 1024px;
   @content;  
  } 
 }
-
 .banner {
     user-select: none;
     width: 100vw;
@@ -40,9 +45,17 @@ $desktop-width: 1024px;
             background-position: -55px;
             background-size: 120vw;
         }
+        @include smallTablet() {
+            overflow: hidden;
+            height: 480px;
+            display: flex;
+            justify-content: space-around;
+            background-position: -55px;
+            background-size: 120vw;
+        }
         @include mobile() {
             display: flex;
-            height: 600px;
+            height: 610px;
             // background: #000;
             background-size: 320vw;
             background-position: -600px;
@@ -54,6 +67,9 @@ $desktop-width: 1024px;
             @include tablet {
                 display: none;
             }
+            @include smallTablet() {
+                display: none;
+            }
             @include mobile() {
                 display: none;
             }
@@ -61,7 +77,7 @@ $desktop-width: 1024px;
         &--filter {
             @include mobile() {
                 position: absolute;
-                height: 600px;
+                height: 610px;
                 width: 100vw;
                 background: radial-gradient(118.67% 101.66% at 141.47% 78.12%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
             }
@@ -82,6 +98,12 @@ $desktop-width: 1024px;
             padding: 0;
             transform: translateX(0px);
         }
+        @include smallTablet() {
+            width: calc(100vw - 100px);
+            top: 100px;
+            padding: 0;
+            transform: translateX(0px);
+        }
         @include mobile {
             width: 100vw;
             top: 130px;
@@ -94,6 +116,9 @@ $desktop-width: 1024px;
         width: 665px;
         height: 404px;
         @include tablet {
+            width: 448px;
+        }
+        @include smallTablet() {
             width: 448px;
         }
         @include mobile {
@@ -110,6 +135,11 @@ $desktop-width: 1024px;
             line-height: 82px;
             user-select: none;
             @include tablet {
+                font-weight: 800;
+                font-size: 42px;
+                line-height: 56px;
+            }
+            @include smallTablet() {
                 font-weight: 800;
                 font-size: 42px;
                 line-height: 56px;
@@ -136,7 +166,12 @@ $desktop-width: 1024px;
                 width: 442px;
                 font-size: 13px;
                 line-height: 26px;
-            }      
+            }     
+            @include smallTablet() {
+                width: 400px;
+                font-size: 12px;
+                line-height: 26px;
+            } 
             @include mobile() {
                 width: 335px;
                 font-size: 12px;
@@ -163,6 +198,11 @@ $desktop-width: 1024px;
             width: 422px;
             height: 72px;
         }
+        @include smallTablet() {
+            margin-top: 20px;
+            width: 320px;
+            height: 64px;
+        }
         @include mobile() {
             width: 335px;
             height: 60px;
@@ -179,6 +219,10 @@ $desktop-width: 1024px;
             @include mobile() {
                 margin-left: 20px;
             }
+            @include smallTablet() {
+                font-size: 12px;
+            }
+
         }
         button{
             width: 136px;
@@ -198,6 +242,11 @@ $desktop-width: 1024px;
             @include tablet {
                 width: 114px;
                 height: 60px;
+            }
+            @include smallTablet() {
+                width: 104px;
+                height: 52px;
+                font-size: 12px;
             }
             @include mobile() {
                 width: 90px;

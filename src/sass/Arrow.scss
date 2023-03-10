@@ -1,13 +1,19 @@
-$mobile-width: 480px; 
-$tablet-width: 768px; 
-$desktop-width: 1024px;  
+$mobile-width: 560px; 
+$tablet-width: 561px; 
+$smallTablet-width:1020px;
+$desktop-width: 1440px;  
 
 @mixin mobile { @media (max-width: #{$mobile-width - 1px}) {     
   @content;   
  } 
 }  
 
-@mixin tablet { @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {       
+@mixin smallTablet { @media (min-width: #{$mobile-width}) and (max-width: #{$smallTablet-width - 1px}) {       
+    @content;   
+  } 
+ }  
+
+@mixin tablet { @media (min-width: #{$smallTablet-width}) and (max-width: #{$desktop-width - 1px}) {       
    @content;   
  } 
 }  
@@ -16,7 +22,6 @@ $desktop-width: 1024px;
   @content;  
  } 
 }
-
 .arrow {
     position: fixed;
     cursor: pointer;
@@ -43,6 +48,10 @@ $desktop-width: 1024px;
         bottom: -100px;
         right: calc(100vw - 55%);
     }
+    @include smallTablet() {
+        bottom: -100px;
+        right: calc(100vw - 55%);
+    }
     &:hover {
         background-color: rgba(239, 56, 56, 0.791);
         -webkit-backdrop-filter: blur(5px);
@@ -59,6 +68,10 @@ $desktop-width: 1024px;
         @include mobile() {
             bottom: 15px;
             right: calc(100vw - 58%);
+        }
+        @include smallTablet() {
+            bottom: 15px;
+            right: calc(100vw - 55%);
         }
     }
 }

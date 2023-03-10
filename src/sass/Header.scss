@@ -1,13 +1,19 @@
-$mobile-width: 480px; 
-$tablet-width: 768px; 
-$desktop-width: 1024px;  
+$mobile-width: 760px; 
+$tablet-width: 761px; 
+$smallTablet-width:1020px;
+$desktop-width: 1440px;  
 
 @mixin mobile { @media (max-width: #{$mobile-width - 1px}) {     
   @content;   
  } 
 }  
 
-@mixin tablet { @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {       
+@mixin smallTablet { @media (min-width: #{$mobile-width}) and (max-width: #{$smallTablet-width - 1px}) {       
+    @content;   
+  } 
+ }  
+
+@mixin tablet { @media (min-width: #{$smallTablet-width}) and (max-width: #{$desktop-width - 1px}) {       
    @content;   
  } 
 }  
@@ -37,8 +43,13 @@ $desktop-width: 1024px;
         padding: 0;
         
     }
+    @include smallTablet() {
+        width: 100vw;
+        padding: 0;
+    }
     @include mobile() {
         padding: 0;
+        margin-top: 10px;
     }
     &__container{
         width: 1200px;
@@ -48,6 +59,9 @@ $desktop-width: 1024px;
         justify-content: flex-end;
         @include tablet {
             width: calc(100vw - 100px);
+        }
+        @include smallTablet() {
+            width: calc(100vw - 80px);
         }
         @include mobile() {
             justify-content: space-between;
@@ -135,6 +149,10 @@ $desktop-width: 1024px;
                     transform: scale(1.2);
                 }
                 @include tablet {
+                    margin-right: 40px;
+                    font-size: 14px;
+                }
+                @include smallTablet() {
                     margin-right: 20px;
                     font-size: 12px;
                 }
@@ -174,8 +192,8 @@ $desktop-width: 1024px;
             &:hover {
                 box-shadow: rgba(238, 10, 10, 0.55) 0px 5px 15px;
             }
-            @include tablet {
-                
+            @include smallTablet() {
+                width: 86px;
             }
             @include mobile() {
                 margin-right: 20px;

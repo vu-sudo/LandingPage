@@ -15,7 +15,7 @@ function Footer() {
     <div className='footer' data-aos="fade-up" >
         <div className='footer__container'>
           <div className='footer__contents'>
-            <div className='footer__contents__text'>
+            <div className='footer__text'>
               <h3 >Çözüm ve Hizmetler</h3>
               <ul className='ul'>
                 <li className='li' >Yazılım Geliştirme</li>
@@ -25,7 +25,7 @@ function Footer() {
                 <li className='li' >IoT Destekli Çözümler</li>
               </ul>
             </div>
-            <div className='footer__contents__text'>
+            <div className='footer__text'>
               <h3 >Ürünler</h3>
               <ul className='ul'>
                 <li className='li' >Eğitim Yönetim Sistemi</li>
@@ -34,7 +34,7 @@ function Footer() {
                 <li className='li' >İçerik Yönetim Sistemi</li>
               </ul>
             </div>
-            <div className='footer__contents__text'>
+            <div className='footer__text'>
               <h3 >Kurumsal</h3>
               <ul className='ul'>
                 <li className='li' >Hakkımızda</li>
@@ -42,7 +42,7 @@ function Footer() {
                 <li className='li' >İş Ortakları</li>
               </ul>
             </div>
-            <div className='footer__contents__text'>
+            <div className='footer__text'>
               <h3 >İletişim</h3>
               <ul className='ul'>
                 <li className='li' >Bilgi İstek Formu</li>
