@@ -48,11 +48,11 @@ function Header() {
             ></div>
                 <div className={`header__option ${"header__option--" + activeMenu}`}>
                     <ul className={`header__option__list`}>
-                        <li>Çözüm ve Hizmetler</li>
-                        <li>Ürünler</li>
-                        <li>Teknolojiler</li>
-                        <li>İnsan Kaynakları</li>
-                        <li>Kurumsal</li>
+                        <li onClick={() => setActiveNav(false)}>Çözüm ve Hizmetler</li>
+                        <li onClick={() => setActiveNav(false)}>Ürünler</li>
+                        <li onClick={() => setActiveNav(false)}>Teknolojiler</li>
+                        <li onClick={() => setActiveNav(false)}>İnsan Kaynakları</li>
+                        <li onClick={() => setActiveNav(false)}>Kurumsal</li>
                     </ul>
                 </div>
 
