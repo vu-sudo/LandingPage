@@ -17,36 +17,36 @@ function Footer() {
           <div className='footer__contents'>
             <div className='footer__text'>
               <h3 >Çözüm ve Hizmetler</h3>
-              <ul className='ul'>
-                <li className='li' >Yazılım Geliştirme</li>
-                <li className='li' >Outsourcing</li>
-                <li className='li' >Kalite ve Süreç Yönetimi</li>
-                <li className='li' >Danışmanlık</li>
-                <li className='li' >IoT Destekli Çözümler</li>
+              <ul>
+                <li >Yazılım Geliştirme</li>
+                <li >Outsourcing</li>
+                <li >Kalite ve Süreç Yönetimi</li>
+                <li >Danışmanlık</li>
+                <li >IoT Destekli Çözümler</li>
               </ul>
             </div>
             <div className='footer__text'>
               <h3 >Ürünler</h3>
-              <ul className='ul'>
-                <li className='li' >Eğitim Yönetim Sistemi</li>
-                <li className='li' >İnsan Sermayesi Yönetim Sistemi</li>
-                <li className='li' >Müşteri İlişkileri Yönetim Sistemi</li>
-                <li className='li' >İçerik Yönetim Sistemi</li>
+              <ul>
+                <li >Eğitim Yönetim Sistemi</li>
+                <li >İnsan Sermayesi Yönetim Sistemi</li>
+                <li >Müşteri İlişkileri Yönetim Sistemi</li>
+                <li >İçerik Yönetim Sistemi</li>
               </ul>
             </div>
             <div className='footer__text'>
               <h3 >Kurumsal</h3>
-              <ul className='ul'>
-                <li className='li' >Hakkımızda</li>
-                <li className='li' >Belge ve Yetkinlikler</li>
-                <li className='li' >İş Ortakları</li>
+              <ul>
+                <li >Hakkımızda</li>
+                <li >Belge ve Yetkinlikler</li>
+                <li >İş Ortakları</li>
               </ul>
             </div>
             <div className='footer__text'>
               <h3 >İletişim</h3>
-              <ul className='ul'>
-                <li className='li' >Bilgi İstek Formu</li>
-                <li className='li' >Uzman Talep Formu</li>
+              <ul>
+                <li >Bilgi İstek Formu</li>
+                <li >Uzman Talep Formu</li>
               </ul>
             </div>
           </div>

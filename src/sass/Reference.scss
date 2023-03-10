@@ -38,7 +38,7 @@ $red-pick: #F84646;
     &__container {
         width: 1200px;
         padding-top: 60px;
-        padding-bottom: 45px;
+        padding-bottom: 60px;
         // background: #ccc;
         @include tablet() {
             width: calc(100vw - 100px);
