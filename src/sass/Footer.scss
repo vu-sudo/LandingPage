@@ -72,7 +72,7 @@ $desktop-width: 1440px;
         // justify-content: space-between;
       }
       @include mobile() {
-        width: 94vw;
+        width: 343px;
         flex-direction: column;
       }
     }
@@ -135,13 +135,13 @@ $desktop-width: 1440px;
       display: flex;
       justify-content: space-between;
       @include mobile() {
-        width: 94vw;
+        width: 343px;
         display: flex;
         flex-direction: column-reverse;
       }
     }
     &__refer {
-    
+      @include mobile() {}
       p {
         font-style: normal;
         font-weight: 400;
@@ -173,10 +173,4 @@ $desktop-width: 1440px;
         }
       }
     }
-}
-.ul {
-
-}
-.li {
-  
 }

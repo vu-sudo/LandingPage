@@ -39,6 +39,9 @@ $red-pick: #F84646;
         padding: 0;
         // display: none;
     }
+    @include mobile() {
+        padding: 0;
+    }
     &__container {
         width: 1200px;
         padding-top: 160px;
@@ -79,7 +82,7 @@ $red-pick: #F84646;
             height: 316px;
         }
         @include mobile() {
-            width: 94vw;
+            width: 343px;
             flex-direction: column;
             justify-content: center;
         }
@@ -96,6 +99,8 @@ $red-pick: #F84646;
                 // justify-content: center;
                 height: 320px;
                 // display: none;
+                display: flex;
+                justify-content: center;
             }
             img{
                 width: 505px;
@@ -109,8 +114,9 @@ $red-pick: #F84646;
                     height: 316px;
                 }
                 @include mobile() {
-                    width: 100%;
+                    width: 343px;
                     height: 320px;
+
                 }
             }
         }
@@ -125,7 +131,7 @@ $red-pick: #F84646;
                 height: 316px;
             }
             @include mobile() {
-                width: 94vw;
+                width: 343px;
                 position: relative;
                 height: 425px;
             }
@@ -236,7 +242,7 @@ $red-pick: #F84646;
                     }
                     @include mobile() {
                 
-                        width: 94vw;
+                        width: 343px;
                         // margin-top: 40px;
                         font-size: 14px;
                     }
@@ -266,7 +272,7 @@ $red-pick: #F84646;
             margin-top: 100px;
         }
         @include mobile() {
-            width: 94vw;
+            width: 343px;
             flex-direction: column;
             justify-content: center;
             margin-top: 55px;
@@ -282,6 +288,8 @@ $red-pick: #F84646;
                 // justify-content: center;
                 height: 320px;
                 // display: none;
+                display: flex;
+                justify-self: center;
             }
             
             img{
@@ -296,7 +304,7 @@ $red-pick: #F84646;
                     height: 316px;
                 }
                 @include mobile() {
-                    width: 100%;
+                    width: 343px;
                     height: 320px;
                 }
             }
@@ -320,7 +328,7 @@ $red-pick: #F84646;
                 // margin-left: 26px;
             }
             @include mobile() {
-                width: 94vw;
+                width: 343px;
                 height: 425px;
                 position: relative;
                 justify-content: center;
@@ -439,10 +447,10 @@ $red-pick: #F84646;
                         font-size: 14px;
                     }
                     @include mobile() {
-                        width: 94vw;
+                        width: 343px;
                         margin-top: 40px;
                         font-size: 14px;
-                        right: 0;
+                        left: 0;
                     }
                     @include smallTablet() {
                         width: 136px;
