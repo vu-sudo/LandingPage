@@ -39,7 +39,7 @@ $desktop-width: 1440px;
         overflow: hidden;
         @include tablet {
             overflow: hidden;
-            height: 480px;
+            height: 640px;
             display: flex;
             justify-content: space-around;
             background-position: -55px;
@@ -93,7 +93,8 @@ $desktop-width: 1440px;
         transform: translateX(-120px);
         @include tablet{
             width: calc(100vw - 100px);
-            top: 100px;
+            top: 151px;
+            left: 70px;
             padding: 0;
             transform: translateX(0px);
         }
@@ -115,7 +116,7 @@ $desktop-width: 1440px;
         width: 665px;
         height: 404px;
         @include tablet {
-            width: 448px;
+            width: 640px;
         }
         @include smallTablet() {
             width: 448px;
@@ -135,8 +136,9 @@ $desktop-width: 1440px;
             user-select: none;
             @include tablet {
                 font-weight: 800;
-                font-size: 42px;
-                line-height: 56px;
+                font-size: 56px;
+                line-height: 74px;
+                height: 147px;
             }
             @include smallTablet() {
                 font-weight: 800;
@@ -162,9 +164,10 @@ $desktop-width: 1440px;
             letter-spacing: 0.2px;   
             margin-top: 20px;   
             @include tablet {
-                width: 442px;
-                font-size: 13px;
+                width: 565px;
+                font-size: 16px;
                 line-height: 26px;
+                height: 99px;
             }     
             @include smallTablet() {
                 width: 400px;

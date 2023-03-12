@@ -135,11 +135,11 @@ $desktop-width: 1440px;
         display: flex;
         flex-wrap: wrap;
         gap: 65px;
-        justify-content: space-evenly;
+        justify-content: space-between;
         @include tablet() {
             width: 734px;
             height: 793px;
-            gap: 60px; 
+            gap: 80px; 
             // background: #ccc;
             // padding: 0px 15px 0px 15px;
         }
