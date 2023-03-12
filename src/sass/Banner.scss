@@ -203,7 +203,7 @@ $desktop-width: 1440px;
         @include smallTablet() {
             margin-top: 20px;
             width: 320px;
-            height: 64px;
+            height: 60px;
         }
         @include mobile() {
             width: 335px;
@@ -247,8 +247,9 @@ $desktop-width: 1440px;
             }
             @include smallTablet() {
                 width: 104px;
-                height: 52px;
+                height: 50px;
                 font-size: 12px;
+                margin-right: 5px;
             }
             @include mobile() {
                 width: 90px;

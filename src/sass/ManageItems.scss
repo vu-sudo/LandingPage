@@ -35,12 +35,16 @@ $desktop-width: 1440px;
     @include tablet() {
         width: 320px;
     }
+
     &__container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        @include smallTablet() {
+            transform: scale(0.9);
+        }
         img{
             width: 76px;
             height: 76px;

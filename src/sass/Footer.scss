@@ -87,7 +87,7 @@ $desktop-width: 1440px;
         margin-top: 50px;
       }
       @include smallTablet() {
-        padding-right: 30px;
+        padding-right: 34px;
       }
       h3 {
         font-family: 'Inter';
@@ -106,7 +106,7 @@ $desktop-width: 1440px;
           font-size: 16px;
         }
         @include smallTablet() {
-          font-size: 14px;
+          font-size: 12px;
         }
       }
       ul>li {
@@ -127,6 +127,7 @@ $desktop-width: 1440px;
         }
         @include smallTablet() {
           font-size: 12px;
+          margin-top: 12px;
         }
       }
     }
@@ -156,7 +157,7 @@ $desktop-width: 1440px;
           font-size: 16px;
         }
         @include smallTablet() {
-          font-size: 14px;
+          font-size: 12px;
         }
       }
       img {
@@ -170,6 +171,9 @@ $desktop-width: 1440px;
         @include mobile() {
           margin-left: 0px;
           margin-right: 16px;
+        }
+        @include smallTablet() {
+          transform: scale(0.8);
         }
       }
     }

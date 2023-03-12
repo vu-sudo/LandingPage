@@ -59,7 +59,7 @@ $red-pick: #F84646;
         @include smallTablet() {
             width: calc(100vw - 100px);
             height: fit-content;
-            padding-top: 82px;
+            padding-top: 72px;
             padding-bottom: 82px;
         }
         @include mobile() {
