@@ -88,8 +88,8 @@ $desktop-width: 1440px;
         width: 1200px;
         height: 404px;
         top: 200px;
-        padding-left: 140px;
-        padding-right: 140px;
+        padding-left: 120px;
+        padding-right: 120px;
         transform: translateX(-120px);
         @include tablet{
             width: calc(100vw - 100px);
