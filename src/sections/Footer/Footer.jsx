@@ -1,11 +1,11 @@
 import React from 'react'
 
-import "../sass/Footer.scss"
-import Media from "../asset/icon/MediumLogo.svg"
-import Lindedin from "../asset/icon/LinkedinLogo.svg"
-import Twitter from "../asset/icon/TwitterLogo.svg"
-import Instagram from "../asset/icon/InstagramLogo.svg"
-import Facebook from "../asset/icon/FacebookLogo.svg"
+import "./Footer.scss"
+import Media from "../../asset/icon/MediumLogo.svg"
+import Lindedin from "../../asset/icon/LinkedinLogo.svg"
+import Twitter from "../../asset/icon/TwitterLogo.svg"
+import Instagram from "../../asset/icon/InstagramLogo.svg"
+import Facebook from "../../asset/icon/FacebookLogo.svg"
 import Aos from 'aos'
 
 
@@ -61,7 +61,6 @@ function Footer() {
               <img  src={Twitter} alt="icon"/>
               <img  src={Instagram} alt="icon"/>
               <img  src={Facebook} alt="icon"/>
-
             </div>
           </div>
         </div>

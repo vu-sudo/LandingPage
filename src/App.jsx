@@ -1,14 +1,14 @@
 import './App.scss';
 
-import Header from './components/Header';
-import Banner from './components/Banner';
-import Manage from './components/Manage';
-import Provide from './components/Provide';
-import Process from './components/Process';
-import Reference from './components/Reference';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Arrow from './components/Arrow';
+import Header from './sections/Header/Header';
+import Banner from './sections/Banner/Banner';
+import Manage from './sections/Manage/Manage';
+import Provide from './sections/Provide/Provide';
+import Process from './sections/Process/Process';
+import Reference from './sections/Reference/Reference';
+import Contact from './sections/Contact/Contact';
+import Footer from './sections/Footer/Footer';
+import Arrow from './components/Arrow/Arrow';
 
 function App() {
   return (

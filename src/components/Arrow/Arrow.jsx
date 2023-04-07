@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useState } from 'react';
 
 import { RxDoubleArrowUp } from "react-icons/rx";
-import "../sass/Arrow.scss"
+import "./Arrow.scss"
 function Arrow() {
     const [scrollPosition, setScrollPosition] = useState(0);
     const [activeScroll, setActiveScroll] = useState(false);

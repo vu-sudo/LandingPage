@@ -1,7 +1,7 @@
 import React from 'react'
 
-import "../sass/Provide.scss"
-import arrowLogo from "../asset/icon/CaretCircleDoubleRight.svg"
+import "./Provide.scss"
+import arrowLogo from "../../asset/icon/CaretCircleDoubleRight.svg"
 import Aos from 'aos'
 
 function Provide() {

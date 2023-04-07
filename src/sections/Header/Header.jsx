@@ -1,7 +1,7 @@
 import Aos from 'aos';
 import React, { useState, useEffect } from 'react'
 
-import "../sass/Header.scss"
+import "./Header.scss"
 function Header() {
     Aos.init();
     const [activeNav, setActiveNav] = useState(false);

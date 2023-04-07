@@ -1,8 +1,8 @@
 import React from 'react'
 
-import "../sass/Process.scss"
-import image1 from "../asset/image/Illustration.jpg"
-import image2 from "../asset/image/Illustration1.png"
+import "./Process.scss"
+import image1 from "../../asset/image/Illustration.jpg"
+import image2 from "../../asset/image/Illustration1.png"
 import Aos from 'aos'
 
 
