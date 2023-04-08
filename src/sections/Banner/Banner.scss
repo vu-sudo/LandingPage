@@ -1,27 +1,4 @@
-$mobile-width: 760px; 
-$tablet-width: 761px; 
-$smallTablet-width:1020px;
-$desktop-width: 1440px;  
-
-@mixin mobile { @media (max-width: #{$mobile-width - 1px}) {     
-  @content;   
- } 
-}  
-
-@mixin smallTablet { @media (min-width: #{$mobile-width}) and (max-width: #{$smallTablet-width - 1px}) {       
-    @content;   
-  } 
- }  
-
-@mixin tablet { @media (min-width: #{$smallTablet-width}) and (max-width: #{$desktop-width - 1px}) {       
-   @content;   
- } 
-}  
-
-@mixin desktop {   @media (min-width: #{$desktop-width}) {     
-  @content;  
- } 
-}
+@import "../../asset/style/scss/global/_global";
 .banner {
     user-select: none;
     width: 100vw;
@@ -229,7 +206,7 @@ $desktop-width: 1440px;
         button{
             width: 136px;
             height: 60px;
-            background: #F84646;
+            background: $red-pick;
             border-radius: 8px;
             font-style: normal;
             font-weight: 700;

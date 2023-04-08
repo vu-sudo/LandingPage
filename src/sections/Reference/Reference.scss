@@ -1,28 +1,5 @@
-$mobile-width: 760px; 
-$tablet-width: 761px; 
-$smallTablet-width:1020px;
-$desktop-width: 1440px; 
+@import "../../asset/style/scss/global/_global";
 
-@mixin mobile { @media (max-width: #{$mobile-width - 1px}) {     
-  @content;   
- } 
-}  
-
-@mixin smallTablet { @media (min-width: #{$mobile-width}) and (max-width: #{$smallTablet-width - 1px}) {       
-    @content;   
-  } 
- }  
-
-@mixin tablet { @media (min-width: #{$smallTablet-width}) and (max-width: #{$desktop-width - 1px}) {       
-   @content;   
- } 
-}  
-
-@mixin desktop {   @media (min-width: #{$desktop-width}) {     
-  @content;  
- } 
-}
-$red-pick: #F84646;
 .reference {
     width: 100vw;
     background: #F4F5F7;

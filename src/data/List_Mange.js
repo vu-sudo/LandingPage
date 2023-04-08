@@ -29,6 +29,6 @@ const Manage_List = [
         title: "Prototipleme",
         desc: "Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus amet, elementum."
     }
-]
+];
 
 export default Manage_List

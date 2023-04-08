@@ -1,28 +1,4 @@
-$mobile-width: 760px; 
-$tablet-width: 761px; 
-$smallTablet-width:1020px;
-$desktop-width: 1440px; 
-
-@mixin mobile { @media (max-width: #{$mobile-width - 1px}) {     
-  @content;   
- } 
-}  
-
-@mixin smallTablet { @media (min-width: #{$mobile-width}) and (max-width: #{$smallTablet-width - 1px}) {       
-    @content;   
-  } 
- }  
-
-@mixin tablet { @media (min-width: #{$smallTablet-width}) and (max-width: #{$desktop-width - 1px}) {       
-   @content;   
- } 
-}  
-
-@mixin desktop {   @media (min-width: #{$desktop-width}) {     
-  @content;  
- } 
-}
-$red-pick: #F84646;
+@import "../../asset/style/scss/global/_global";
 .process {
     width: 100vw;
     // background: #ccc;
@@ -228,7 +204,7 @@ $red-pick: #F84646;
                     gap: 10px;
                     width: 160.4px;
                     height: 48px;
-                    background: #F84646;
+                    background: $red-pick;
                     border-radius: 8px;
                     border: none;
                     color: white;
@@ -435,7 +411,7 @@ $red-pick: #F84646;
                     gap: 10px;
                     width: 160.4px;
                     height: 48px;
-                    background: #F84646;
+                    background: $red-pick;
                     border-radius: 8px;
                     border: none;
                     color: white;

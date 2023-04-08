@@ -5,6 +5,29 @@ import "./Reference.scss"
 
 function Reference() {
     Aos.init();
+    const logos = [
+        {
+            id: 1,
+            col: ["BorusanLogo"]
+        },
+        {
+            id: 2,
+            col: ["InstandLogo", "BookMyShowLogo"]
+        },
+        {
+            id: 3,
+            col: ["AkbankLogo", "AkcanSALogo", "TumunuGorLogo"]
+        },
+        {
+            id: 4,
+            col: ["AkatasLogo", "OLALogo"]
+        },
+        {
+            id: 5,
+            col: ["AmazonLogo"],
+        }
+    ];
+
   return (
     <div className='reference' data-aos="fade-up" >
         <div className='reference__container' >
@@ -14,44 +37,19 @@ function Reference() {
             </div>
             <div className='reference__com'>
                 <div className='reference__items'>
-                    <div className='reference__items__box' >
-                        <div className='box'data-aos="fade-up" >
-                            <img src={require("../../asset/image/logoCloud/image 6.png")} alt="company" />
-                        </div>
-                    </div>
-                    <div className='reference__items__box'>
-                        <div className='box'data-aos="fade-up" >
-                            <img src={require("../../asset/image/logoCloud/image 5.png")} alt="company" />
-                        </div>
-                        <div className='box'data-aos="fade-up" >
-                            <img src={require("../../asset/image/logoCloud/BookMyShow Logo.png")} alt="company" />
-                        </div>
-                    </div>
-                    <div className='reference__items__box'>
-                        <div className='box'data-aos="fade-up" >
-                            <img src={require("../../asset/image/logoCloud/image 2.png")} alt="company" />
-                        </div>
-                        <div className='box'data-aos="fade-up" >
-                            <img src={require("../../asset/image/logoCloud/image 3.png")} alt="company" />
-                        </div>
-                        <div className='box'data-aos="fade-up" >
-                            <img src={require("../../asset/image/logoCloud/Frame 4.png")} alt="company" />
-                        </div>
-
-                    </div>
-                    <div className='reference__items__box'>
-                        <div className='box'data-aos="fade-up" >
-                            <img src={require("../../asset/image/logoCloud/image 4.png")} alt="company" />
-                        </div>
-                        <div className='box'data-aos="fade-up" >
-                            <img src={require("../../asset/image/logoCloud/OLA logo.png")} alt="company" />
-                        </div>
-                    </div>
-                    <div className='reference__items__box'>
-                        <div className='box'data-aos="fade-up" >
-                            <img src={require("../../asset/image/logoCloud/Amazon Logo.png")} alt="company" />
-                        </div>
-                    </div>
+                    {
+                        logos.map((items, index) => (
+                            <div className='reference__items__box' key={items.id}>
+                                {
+                                    items.col.map((logo, index) => (
+                                        <div className='box' data-aos="fade-up" key={index}>
+                                            <img src={require("@logo/" + logo + ".png")} alt="" />
+                                        </div>
+                                    ))
+                                }
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         </div>

@@ -1,13 +1,28 @@
 import React from 'react'
 
 import "./Process.scss"
-import image1 from "../../asset/image/Illustration.jpg"
-import image2 from "../../asset/image/Illustration1.png"
+import image1 from "@image/Illustration.jpg"
+import image2 from "@image/Illustration1.png"
 import Aos from 'aos'
 
 
 function Process() {
     Aos.init();
+    // const processData = [
+    //     {
+    //         id: 1,
+    //         img: "image1",
+    //         title: "Kalite ve Süreç Yönetimi",
+    //         content: "Deneyimli kadromuz; birçok farklı sektörden deneyimli, PMP® sertifikasına sahip, uzman proje yöneticilerinden oluşmaktadır. Projelerinizin yönetimine destek olmak, zayıf olduğunu düşündüğünüz alanları güçlendirmek, uluslararası geçerliliği olan PMI® metodolojisini şirketinizde uygulamak ve geliştirmek için yanınızdayız.",
+    //     },
+    //     {
+    //         id: 2,
+    //         img: "image2", 
+    //         title: "Test Yönetimi ve Analizi",
+    //         content: "Deneyimli kadromuz; birçok farklı sektörden deneyimli, PMP® sertifikasına sahip, uzman proje yöneticilerinden oluşmaktadır. Projelerinizin yönetimine destek olmak, zayıf olduğunu düşündüğünüz alanları güçlendirmek, uluslararası geçerliliği olan PMI® metodolojisini şirketinizde uygulamak ve geliştirmek için yanınızdayız."
+    //     }
+    // ]
+    // chổ này không map được vì css riêng từng phần :(
   return (
     <div className='process'>
         <div className='process__container'>

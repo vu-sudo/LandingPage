@@ -1,7 +1,7 @@
 import React from 'react'
 
 import "./Banner.scss"
-import BanerImage from "../../asset/image/Rectangle_1.png"
+import BanerImage from "@image/Rectangle_1.png"
 function Banner() {
   return (
     <div className='banner' id='banner'>

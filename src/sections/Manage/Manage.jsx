@@ -1,8 +1,8 @@
 import React from 'react'
 
 import "./Manage.scss"
-import Manage_List from '../../data/List_Mange'
-import ManageItems from '../../components/ManageItems/ManageItems'
+import Manage_List from '@data/List_Mange'
+import ManageItems from '@components/ManageItems/ManageItems'
 
 function Manage() {
   return (

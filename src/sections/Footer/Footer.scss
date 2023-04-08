@@ -1,34 +1,10 @@
-$mobile-width: 760px; 
-$tablet-width: 761px; 
-$smallTablet-width:1020px;
-$desktop-width: 1440px; 
-
-@mixin mobile { @media (max-width: #{$mobile-width - 1px}) {     
-  @content;   
- } 
-}  
-
-@mixin smallTablet { @media (min-width: #{$mobile-width}) and (max-width: #{$smallTablet-width - 1px}) {       
-    @content;   
-  } 
- }  
-
-@mixin tablet { @media (min-width: #{$smallTablet-width}) and (max-width: #{$desktop-width - 1px}) {       
-   @content;   
- } 
-}  
-
-@mixin desktop {   @media (min-width: #{$desktop-width}) {     
-  @content;  
- } 
-}
-
+@import "../../asset/style/scss/global/_global";
 .footer {
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #F8464A;
+    background: $red-pick;
     padding-right: 120px;
     padding-left: 120px;
     @include tablet() {

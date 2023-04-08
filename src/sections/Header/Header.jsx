@@ -40,6 +40,13 @@ function Header() {
     // console.log(activeHeader);
 
     let headerActive = activeHeader ? "" : "hided"
+    const links = [
+        "Çözüm ve Hizmetler",
+        "Ürünler",
+        "Teknolojiler",
+        "İnsan Kaynakları",
+        "Kurumsal"
+    ] 
     return (
         <div className={`header ${"header--" + headerActive}`} id = "header">
             <div className='header__container'>
@@ -48,11 +55,11 @@ function Header() {
             ></div>
                 <div className={`header__option ${"header__option--" + activeMenu}`}>
                     <ul className={`header__option__list`}>
-                        <li onClick={() => setActiveNav(false)}>Çözüm ve Hizmetler</li>
-                        <li onClick={() => setActiveNav(false)}>Ürünler</li>
-                        <li onClick={() => setActiveNav(false)}>Teknolojiler</li>
-                        <li onClick={() => setActiveNav(false)}>İnsan Kaynakları</li>
-                        <li onClick={() => setActiveNav(false)}>Kurumsal</li>
+                        {
+                            links.map((items, index) => (
+                                <li onClick={() => setActiveNav(false)} key={index}>{items}</li>
+                            ))
+                        }
                     </ul>
                 </div>
 
